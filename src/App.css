@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app {
+    /* background-color: brown; */
+    flex-direction: column;
+}
+.displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+header h1 {
+    margin-bottom: 1rem;
+
+    padding: 0.5rem;
+    width: 7rem;
+}
+header img {
+    width: 50x;
+    height: 70px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+    flex-direction: row !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form > * {
+    margin-right: 0.1rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form input,
+.btn,
+select {
+    height: 2rem;
+    font-size: 1.1rem;
+    border: 0.1rem solid #000;
 }
-
-.App-link {
-  color: #61dafb;
+form input {
+    /* background-color: brown; */
+    width: 20rem;
+    border: 0.1rem solid #000;
+    /* margin-right: rem; */
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    border-radius: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input:focus {
+    border-radius: none;
+}
+.btn {
+    background-color: #000;
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    margin: 0.1rem;
+    border: none;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn-add {
+    background-color: #118111;
+}
+.btn-deleted {
+    background-color: #ff4444;
+}
+.btn-completed {
+    background-color: #4444ff;
+}
+ul {
+    margin: 3rem;
+}
+.todo {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    /* background-color: yellow; */
+    min-width: 10rem;
+    margin: 0.5rem;
+}
+.todo .btns {
+    margin-left: 0.5rem;
+}
+.todo li {
+    font-size: 1.2rem;
+    list-style: square;
+    list-style-position: inside;
+    font-weight: bold;
+    word-wrap: break-word;
+    padding: 0.5rem;
+}
+.completed {
+    text-decoration: line-through;
+    background-color: #eee;
+}
+#warn {
+    background-color: #ccc;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.2rem;
+    width: 14rem;
+    margin: 0.5rem auto;
+    display: none;
+    position: relative;
+}
+#warn::after {
+    content: " ";
+    position: absolute;
+    border: 0.5rem solid #ccc;
+    border-color: #ccc transparent transparent transparent;
+    rotate: 90deg;
+    bottom: -15px;
+    left: 0;
 }
